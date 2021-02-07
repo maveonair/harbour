@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.brand,
+.brand:visited {
+  color: var(--text);
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .brand,
+  .brand:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
