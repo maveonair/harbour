@@ -25,9 +25,14 @@ export default class Client {
     );
 
     if (response.statusCode === 200) {
-      return response.result.tags;
+      const tags = response.result.tags;
+      return tags.sort(sortDescending);
     }
 
     return [];
   }
 }
+
+const sortDescending = (s1: string, s2: string): number => {
+  return s2.localeCompare(s1);
+};
